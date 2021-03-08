@@ -4,8 +4,8 @@ from django.shortcuts import render
 
 #Authentication
 def Login(request):
-    return render(request, 'accounts/login.html')
+    return render(request, 'accounts/Authentication/LoginForm.html')
 
 #Home
 def Home(request):
-    return render(request, 'accounts/index.html')
+    return render(request, 'accounts/Home/Home.html')

@@ -23,8 +23,8 @@ urlpatterns = [
     path('', include('RegistryApp.urls')),
 
     #Authentication
-    path('Login/', Login),
+    path('Login/', Login, name='Login'),
     
     # Home
-    path('', Home),
+    path('', Home, name='Home'),
 ]

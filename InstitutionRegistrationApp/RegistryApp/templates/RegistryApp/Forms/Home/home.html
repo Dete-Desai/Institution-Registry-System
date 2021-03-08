@@ -1,0 +1,421 @@
+{% extends 'RegistryApp/base.html' %} {% load static %} {% block content %}
+<!-- Page Content -->
+<!-- Banner Starts Here -->
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="header-text caption">
+          <h2>Search Institution</h2>
+          <div id="search-section">
+            <form id="suggestion_form" name="gs" method="get" action="#">
+              <div class="searchText">
+                <input
+                  type="text"
+                  name="q"
+                  class="searchText"
+                  placeholder="Enter institution name here..."
+                  autocomplete="on"
+                />
+                <ul>
+                  <span>Search for registered hospitals and Schools</span>
+                </ul>
+              </div>
+              <input
+                type="submit"
+                name="results"
+                class="main-button"
+                value="Search Now"
+              />
+            </form>
+            <div class="advSearch_chkbox"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Banner Ends Here -->
+
+<!-- Trusted Starts Here -->
+<div class="trusted-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="trusted-section-heading">
+          <h4>UNES AND USAID PROJECT</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Trusted Ends Here -->
+
+<!-- Services Starts Here -->
+<div class="services-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-heading">
+          <span>Institution Registration Services</span>
+          <h2>Services we provide</h2>
+          <p>
+            We provide registry of hospitals and learning institutions and keep
+            track of records of the institutions and the related personel
+            related to the institutions.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="service-item">
+          <i class="fa fa-h-square" style="font-size: 36px"></i>
+          <h4>Health Institutions Registration</h4>
+          <p>
+            Health Institution are registered with the standard health and
+            measurement policy of the health ministry of Kenya and records of
+            their details are stored for analysis use.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="service-item">
+          <i class="fa fa-graduation-cap" style="font-size: 36px"></i>
+          <h4>Learning Institutions Registration</h4>
+          <p>
+            Learning Institution are registered with the standard education and
+            measurement policy of the education ministry of Kenya and records of
+            their details are stored for analysis use.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="service-item">
+          <i class="fa fa-users" style="font-size: 36px"></i>
+          <h4>Personel Tracking</h4>
+          <p>
+            We track and keep records of personel related to each of the
+            institutions. This means that records of patients and staff related
+            to health institution and students and staff related to learning
+            institutions are kept and provided for the user.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Services Ends Here -->
+
+<!-- Pricing Starts Here -->
+<div class="pricing-section">
+  <div class="background-image-pricing"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="section-heading">
+          <h2>Institution Registration Plans</h2>
+          <p>
+            Below are the plans that we stretch to adhere in terms of registerig
+            health and learning institutions in the country.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="pricing-item">
+          <h4>Health Institutions</h4>
+          <div class="price">
+            <h6>2000</h6>
+            <span>Health Institutions Registered</span>
+          </div>
+          <p>
+            Below are some of the requirements for registering health
+            institutions.
+          </p>
+          <div class="dev"></div>
+          <ul>
+            <li><i class="fa fa-check"></i>500 GB Storage Space</li>
+            <li><i class="fa fa-check"></i>3 TB Data Transfer</li>
+            <li><i class="fa fa-check"></i>Basic Managed Panel</li>
+            <li><i class="fa fa-check"></i>24/7 Fast Support</li>
+            <li><i class="fa fa-check"></i>100 Premium Themes</li>
+            <li><i class="fa fa-check"></i>Cancel or Upgrade Anytime</li>
+          </ul>
+          <a href="#" class="main-button">See More...</a>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="pricing-item">
+          <h4>Learning Institutions</h4>
+          <div class="price price-gradient">
+            <h6>3000</h6>
+            <span>Learning Institutions Registered</span>
+          </div>
+          <p>
+            Below are some of the requirements for registering learning
+            institutions.
+          </p>
+          <div class="dev"></div>
+          <ul>
+            <li><i class="fa fa-check"></i>1 TB Cloud Space</li>
+            <li><i class="fa fa-check"></i>8 TB Data Transfer</li>
+            <li><i class="fa fa-check"></i>Fully Managed Panel</li>
+            <li><i class="fa fa-check"></i>15-minute Quick Support</li>
+            <li><i class="fa fa-check"></i>Unlimted Web Addons</li>
+            <li><i class="fa fa-check"></i>Cancel or Upgrade Anytime</li>
+          </ul>
+          <a href="#" class="gradient-button">See More</a>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="pricing-item">
+          <h4>Persons Records</h4>
+          <div class="price">
+            <h6>60000</h6>
+            <span>Total Number of Personel Record</span>
+          </div>
+          <p>Below are the persons in the system records.</p>
+          <div class="dev"></div>
+          <ul>
+            <li><i class="fa fa-check"></i>Hospital Patients</li>
+            <li><i class="fa fa-check"></i>Students/Pupils</li>
+            <li><i class="fa fa-check"></i>Learning Institution Staff</li>
+            <li><i class="fa fa-check"></i>Health Institution Staff</li>
+          </ul>
+          <a href="#" class="main-button">See More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Pricing Ends Here -->
+
+<!-- Features Starts Here -->
+<div class="features-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-heading">
+          <span>More Information For You</span>
+          <h2>Institutions Features</h2>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h2>Health Institutions</h2>
+      </div>
+      <div class="col-md-6">
+        <h2>Learning Institutions</h2>
+      </div>
+      <div class="col-md-6">
+        <div class="feature-item">
+          <div class="icon">
+            <img
+              src="../../static/RegistryAPP/assets/images/health.jpg"
+              alt=""
+            />
+          </div>
+          <h4>Level 6 Hospitals</h4>
+          <p>
+            Hospitals classified under Level 6 hospitals in the Kenyan health
+            system include national referral hospitals and large private
+            teaching / mission (faith-based) hospitals..
+            <a
+              href="https://hosi.co.ke/hospital-level/level-6/#:~:text=Hospitals%20classified%20under%20Level%206,(faith%2Dbased)%20hospitals."
+            >
+              See List
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="feature-item">
+          <div class="icon">
+            <img
+              src="{% static 'RegistryAPP/assets/images/feature-01.png' %}"
+              alt=""
+            />
+          </div>
+          <h4>Higher Learning Institutions</h4>
+          <p>
+            Higher education includes teaching, research, exacting applied work
+            (e.g. in medical schools and dental schools), and social services
+            activities of universities. ... The latter level of education is
+            often referred to as graduate school, especially in North America..
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="feature-item">
+          <div class="icon">
+            <img
+              src="{% static 'RegistryAPP/assets/images/feature-01.png' %}"
+              alt=""
+            />
+          </div>
+          <h4>Level 5 Hospitals</h4>
+          <p>
+            A Level 5 hospital would include all the above and manage all but
+            the most highly complex patients. and procedures. It would also act
+            as referral service for all but the most complex service needs,
+            which may mean highly complex, high-risk patients require transfer.
+            or referral to a Level 6 service..
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="feature-item">
+          <div class="icon">
+            <img
+              src="{% static 'RegistryAPP/assets/images/feature-01.png' %}"
+              alt=""
+            />
+          </div>
+          <h4>High Schools</h4>
+          <p>
+            High school is an institution which provides all or part of
+            secondary education. Other terms such as "secondary school" or
+            "secondary college" are used in different nations or regions. The
+            phrase "high school" often forms part of the name of the secondary
+            institution..
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="feature-item">
+          <div class="icon">
+            <img
+              src="{% static 'RegistryAPP/assets/images/feature-01.png' %}"
+              alt=""
+            />
+          </div>
+          <h4>Level 1 2 3 4 Hospitals</h4>
+          <p>
+            The ideological centralisation proposed in the Hospital Plan is
+            about as realistic as would be a plan to scrap all the ships in the
+            fleet except the aircraft carriers, and about as moral as would be a
+            plan to close all the parish churches on the grounds that the work
+            done in them could be more efficiently organised in cathedrals.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="feature-item">
+          <div class="icon">
+            <img
+              src="{% static 'RegistryAPP/assets/images/feature-01.png' %}"
+              alt=""
+            />
+          </div>
+          <h4>Primary Schools</h4>
+          <p>
+            Most primary schools are day schools with pupils living at home.
+            Fewer schools at primary level are boarding schools compared to
+            secondary schools. All public primary school pupils sit for the
+            Kenya Certificate of Primary Education examination at the end of the
+            school year in Standard eight.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="feature-item">
+          <div class="icon">
+            <img
+              src="{% static 'RegistryAPP/assets/images/feature-01.png' %}"
+              alt=""
+            />
+          </div>
+          <h4>Clinics</h4>
+          <p>
+            class of medical instruction in which patients are examined and
+            discussed. 2 : a group meeting devoted to the analysis and solution
+            of concrete problems or to the acquiring of specific skills or
+            knowledge writing clinics golf clinics. 3a : a facility (as of a
+            hospital) for diagnosis and treatment of outpatients..
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="feature-item">
+          <div class="icon">
+            <img
+              src="{% static 'RegistryAPP/assets/images/feature-01.png' %}"
+              alt=""
+            />
+          </div>
+          <h4>Kindergartens</h4>
+          <p>
+            Here are 10 kindergartens and daycares conveniently located closeby.
+            ... Lavington, Nairobi Kenya ... Kilimani, Muringa Grove, Nairobi
+            Kenya ... a safe, nurturing and consistent environment where limits
+            and boundaries are clearly defined.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Features Ends Here -->
+
+<!-- Testimonials Starts Here -->
+<div class="testimonials-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-heading">
+          <span>UNIVERSITY OF NAIROBI ENTERPRISES AND SERVICES LIMITED </span>
+          <h2>Board of Directors</h2>
+        </div>
+      </div>
+      <div class="col-md-10 offset-md-1">
+        <div class="owl-testimonials owl-carousel">
+          <div class="testimonial-item">
+            <div class="icon">
+              <i class="fa fa-quote-right"></i>
+            </div>
+            <p>
+              Eng. Kariuki Muchemi BSc. Civil Engineering, MSc, LLB, Born in
+              1954, Eng. Kariuki Muchemi is a practising Civil Engineer with
+              over thirty (30) years’ experience in both public and private
+              sector. He holds a BSc. Degree in Civil Engineering from the
+              University of Nairobi, MSc Degree from the University of
+              Birmingham UK, LLB from Mt. Kenya University and Post Graduate.
+            </p>
+            <h4>Eng. Kariuki Muchemi</h4>
+            <span>Board Chairman</span>
+          </div>
+          <div class="testimonial-item">
+            <div class="icon">
+              <i class="fa fa-quote-right"></i>
+            </div>
+            <p>
+              Mr. Hirji Shah, OGW Born in 1936. Mr. Hirji Shah has vast
+              experience in the private sector where he has been actively
+              involved in several manufacturing industries, businesses and
+              charitable organizations for the last 50 years, in Kenya and
+              abroad. He is a director in several companies, including Mabati
+              Rolling Mills Limited, Comcraft Kenya Limited, Kaluworks Limited,
+              Booth Extrusions Limited.
+            </p>
+            <h4>Mr. Hirji Shah</h4>
+            <span>Director</span>
+          </div>
+          <div class="testimonial-item">
+            <div class="icon">
+              <i class="fa fa-quote-right"></i>
+            </div>
+            <p>
+              Mr. Seith O. Abeka, B. A. Economics & Mathematics (UoN), M.A.
+              Gender & Development Studies (UoN Born in 1978, Mr. Seith Abeka is
+              the Ag. Managing Director of the UNES Limited. Previously headed
+              UNES Consultancy and Partnership department as the Chief Manager
+              in charge of Consultancy & Partnerships portfolio. He has wealth
+              of experience in Organization Development and Project Management.
+            </p>
+            <h4>Mr. Seith O. Abeka</h4>
+            <span>Ag. Managing Director</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Testimonials Ends Here -->
+{% endblock %}

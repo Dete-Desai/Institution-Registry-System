@@ -1,3 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      />
+      <meta name="description" content="" />
+      <meta name="author" content="TemplateMo" />
+      <link
+        href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700"
+        rel="stylesheet"
+      />
+      {% if title %}
+      <title>(I R S) - {{ title }}</title>
+      {% else %}
+      <title>(I R S)</title>
+      {% endif %}
+      <!-- Bootstrap core CSS -->
+      <link
+        href="{% static 'RegistryApp/vendor/bootstrap/css/bootstrap.min.css' %}"
+        rel="stylesheet"
+      />
+
+      <!-- Additional CSS Files -->
+      <link
+        rel="stylesheet"
+        href="{% static 'RegistryApp/assets/css/auth.css' %}"
+      />
+</head>
+<body>
+<div class="system-heading">
+<h1>INSTITUTION REGISTRY SYSTEM<h3>(IRS)</h3></h1>
+</div>
 <div class="login-wrap">
 	<div class="login-html">
 		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
@@ -52,3 +88,6 @@
 		</div>
 	</div>
 </div>
+</body>
+<html>
+</html>
