@@ -1,0 +1,21 @@
+The project requirements are as portrayed below
+    'python 3.9.0 +'
+    'Virtual environment',
+    'django 3.0',
+    'crispy_forms',
+    'template_debug',
+    'rest_framework'
+    'postgresql' for database but the main details are all in the "setings.py" file inside the 
+    InstitutionRegistrationApp
+
+for further information see: https://www.djangoproject.com/
+
+The administrative rights are the two accounts below:
+for administration
+        'USER': 'lamechdete',
+        'PASSWORD': 'century100',
+
+        or the one below for a normal user
+
+        'USER': 'lamechdesai',
+        'PASSWORD': 'desai@2021',
