@@ -55,6 +55,11 @@ def RegistrationReportsPage(request):
     return render(request, 'RegistryApp/Pages/RegistrationReportsPage.html')
 
 @login_required(login_url='Login')
+@allowed_users(allowed_roles=['admin','registrar','viewer'])
+def MapPage(request):
+    return render(request, 'RegistryApp/Pages/MapPage.html')
+
+@login_required(login_url='Login')
 @allowed_users(allowed_roles=['admin'])
 def base(request):
     return render(request, 'RegistryApp/base.html')

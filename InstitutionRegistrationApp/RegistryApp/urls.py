@@ -12,6 +12,7 @@ urlpatterns = [
     path('SelectionPage/', views.SelectionPage, name='SelectionPage'),
     path('RegistrationFormsPage/', views.RegistrationFormsPage, name='RegistrationFormsPage'),
     path('RegistrationReportsPage/', views.RegistrationReportsPage, name='RegistrationReportsPage'),
+    path('MapPage/', views.MapPage, name='MapPage'),
 
     path('HospitalRegistrationForm/', views.HospitalRegistrationForm, name='HospitalRegistrationForm'),
     path('SchoolsRegistrationForm/', views.SchoolsRegistrationForm, name='SchoolsRegistrationForm'),
