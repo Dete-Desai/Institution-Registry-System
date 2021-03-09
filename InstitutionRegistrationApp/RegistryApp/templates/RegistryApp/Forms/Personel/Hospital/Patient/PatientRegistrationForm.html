@@ -1,0 +1,85 @@
+{% extends 'RegistryApp/base.html' %} {% load crispy_forms_tags %} {% load static %} {% block content %}
+
+    <!-- Page Content -->
+    <!-- Heading Starts Here -->
+    <div class="page-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>HOSPITAL REGISTRATION FORM</h1>
+            <p><a href="{% url 'Home' %}">Home</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Heading Ends Here -->
+
+
+    <!-- Contact Us Starts Here -->
+    <div class="contact-us">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="contact-form">
+              <form id="contact" action="{% url 'PatientRegistrationForm' %}" method="post">
+              {% csrf_token %}
+                <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label>Hospital ID:</label>
+                      {{form.hospital_id|as_crispy_field}}
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label>Hospital Name:</label>
+                      {{form.hospital_name|as_crispy_field}}
+                    </fieldset>
+                  </div>
+                <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label>Patient ID/Birth Certificate Number :</label>
+                      {{form.id_birth_number|as_crispy_field}}
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label>NHIF Number:</label>
+                      {{form.nhif_number|as_crispy_field}}
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label>Patient Full Name:</label>
+                      {{form.patient_name|as_crispy_field}}
+                    </fieldset>
+                  </div>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <div class="row col-lg-12">
+                    <div class="col-lg-4">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="main-button fas fa-database">Register</button>
+                    </fieldset>
+                    </div>
+                    <div class="col-lg-8">
+                        <fieldset>
+                        <div class="col-md-4 position-relative form-check">
+                                <a href="{% url 'PatientReport' %}" class="mt-1 btn btn-secondary btn-block btn-lg">
+                                    <i class="fas fa-stream"></i>Back To Report
+                                </a>
+                            </div>
+                        </fieldset>
+                    </div>
+                  </div>
+                </div>
+              </form>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br></br>
+    <br></br>
+    {% endblock %}

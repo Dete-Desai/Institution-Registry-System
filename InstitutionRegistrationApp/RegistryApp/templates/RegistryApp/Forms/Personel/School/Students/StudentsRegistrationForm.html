@@ -1,0 +1,91 @@
+{% extends 'RegistryApp/base.html' %} {% load crispy_forms_tags %} {% load static %} {% block content %}
+
+    <!-- Page Content -->
+    <!-- Heading Starts Here -->
+    <div class="page-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>STUDENT/PUPIL REGISTRATION FORM</h1>
+            <p><a href="{% url 'Home' %}">Home</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Heading Ends Here -->
+
+
+    <!-- Contact Us Starts Here -->
+    <div class="contact-us">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="contact-form">
+              <form id="contact" action="{% url 'StudentsRegistrationForm' %}" method="post">
+              {% csrf_token %}
+                <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label>School ID:</label>
+                      {{form.school_id|as_crispy_field}}
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label>School Name:</label>
+                      {{form.school_name|as_crispy_field}}
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label>Student Name:</label>
+                      {{form.student_name|as_crispy_field}}
+                    </fieldset>
+                  </div>
+                <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label>Student/Pupil ID/Birth Certificate Number :</label>
+                      {{form.student_pupil_id_birth_number|as_crispy_field}}
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label>Student/Pupil Age:</label>
+                      {{form.student_pupil_number|as_crispy_field}}
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label>Grade/Year Number:</label>
+                      {{form.grade_year_number|as_crispy_field}}
+                    </fieldset>
+                  </div>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <div class="row col-lg-12">
+                    <div class="col-lg-4">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="main-button fas fa-database">Register</button>
+                    </fieldset>
+                    </div>
+                    <div class="col-lg-8">
+                        <fieldset>
+                        <div class="col-md-4 position-relative form-check">
+                                <a href="{% url 'StudentReport' %}" class="mt-1 btn btn-secondary btn-block btn-lg">
+                                    <i class="fas fa-stream"></i>Back To Report
+                                </a>
+                            </div>
+                        </fieldset>
+                    </div>
+                  </div>
+                </div>
+              </form>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br></br>
+    <br></br>
+    {% endblock %}

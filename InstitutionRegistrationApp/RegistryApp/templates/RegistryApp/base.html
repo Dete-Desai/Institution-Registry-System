@@ -1,4 +1,5 @@
 {% load static %}
+{% load crispy_forms_tags %} 
 <!DOCTYPE html>
 <html>
   <html lang="en">
@@ -54,9 +55,9 @@
 
         <!-- Header -->
         <header class="">
-          <nav class="navbar navbar-expand-lg col-lg-12">
+          <nav class="navbar navbar-expand-lg col-md-12 col-lg-12">
             <div class="container">
-              <a class="navbar-brand" href="index.html"
+              <a class="navbar-brand" href="{% url 'Home' %}"
                 ><h2>IRS<em>(INSTITUTION REGISTRY SYSTEM)</em></h2></a
               >
               <button
@@ -73,26 +74,27 @@
               <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                   <li class="nav-item active">
-                    <a class="nav-link" href="index.html"
+                    <a class="nav-link" href="{% url 'Home' %}"
                       >Home
                       <span class="sr-only">(current)</span>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us</a>
+                    <a class="nav-link" href="{% url 'about' %}">About</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="services.html">Our Services</a>
+                    <a class="nav-link" href="{% url 'SelectionPage' %}">Registration/Reports</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact Us</a>
+                    <a class="nav-link" href="{% url 'admin:index' %}">Admin</a>
                   </li>
                 </ul>
               </div>
               <div class="functional-buttons">
                 <ul>
-                  <li><a href="#">Log in</a></li>
-                  <li><a href="#">Sign Up</a></li>
+                  <li><a href="{% url 'Login' %}">Log in</a></li>
+                  <li><a href="{% url 'Logout' %}">Logout</a></li>
+                  <li><a href="{% url 'Registration' %}">Sign Up</a></li>
                 </ul>
               </div>
             </div>
@@ -145,10 +147,10 @@
                     <h2>Useful Links</h2>
                   </div>
                   <ul class="footer-list">
-                    <li><a href="#">Registration Procedure</a></li>
-                    <li><a href="#">Institutions Registered</a></li>
+                    <li><a href="{% url 'RegistrationFormsPage' %}">Registration Procedure</a></li>
+                    <li><a href="{% url 'RegistrationReportsPage' %}">Institutions Registered</a></li>
                     <li><a href="#">User Support</a></li>
-                    <li><a href="#">Latest News</a></li>
+                    <li><a href="{% url 'Home' %}">Latest News</a></li>
                   </ul>
                 </div>
               </div>

@@ -1,0 +1,64 @@
+{% extends 'RegistryApp/base.html' %} 
+{% load static %} 
+{% block content %}
+<div class="app-page-title">
+    <!-- Page Content -->
+    <!-- Heading Starts Here -->
+    <div class="page-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>SCHOOL STAFF REPORT</h1>
+            <p><a href="{% url 'Home' %}">Home</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Heading Ends Here -->
+    <a href="{% url 'SchoolStaffRegistrationForm' %}">
+        <i class="fa fa-arrow-left"> Back</i>
+    </a>
+</div>
+<div class="row">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="main-card mb-3 card">
+                <div class="card-body">
+                    <div class="row col-lg-12">
+                        <div class="col-md-10">
+                            <h5 class="card-title">School Staff Records</h5>
+                        </div>
+                    </div>
+                    <br></br>
+
+                    <table class="mb-0 table">
+                        <thead>
+                            <tr>
+                                <th>School ID</th>
+                                <th>School Name</th>
+                                <th>National/Passport ID</th>
+                                <th>Staff Work ID</th>
+                                <th>Staff Name</th>
+                                <th>Staff Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for SchoolStaffRegistrationForm in SchoolStaffReport %}
+                            <tr>
+                                <td>{{SchoolStaffRegistrationForm.school_id}}</td>
+                                <td>{{SchoolStaffRegistrationForm.school_name}}</td>
+                                <td>{{SchoolStaffRegistrationForm.national_passport_id}}</td>
+                                <td>{{SchoolStaffRegistrationForm.staff_work_id}}</td>
+                                <td>{{SchoolStaffRegistrationForm.staff_name}}</td>
+                                <td>{{SchoolStaffRegistrationForm.staff_role}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

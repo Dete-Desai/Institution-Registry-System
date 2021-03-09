@@ -1,0 +1,66 @@
+{% extends 'RegistryApp/base.html' %} {% block content %}
+<div class="app-page-title">
+  <!-- Page Content -->
+  <!-- Heading Starts Here -->
+  <div class="page-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>SELECTION PAGE</h1>
+          <p><a href="{% url 'Home' %}">Home</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Heading Ends Here -->
+  <a href="{% url 'SelectionPage' %}">
+    <i class="fa fa-arrow-left"> Back</i>
+  </a>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="main-card mb-3 card">
+        <div class="card-body">
+          <h5 class="card-title">Hospital Reports</h5>
+          <a href="{% url 'HospitalReport' %}">
+            <i class="mb-2 mr-2 btn-transition btn btn-outline-info"
+              >Hospital Report</i
+            >
+          </a>
+          <a href="{% url 'HospitalStaffReport' %}">
+            <i class="mb-2 mr-2 btn-transition btn btn-outline-info"
+              >Hospital Staff Report</i
+            >
+          </a>
+          <a href="{% url 'PatientReport' %}">
+            <i class="mb-2 mr-2 btn-transition btn btn-outline-info"
+              >Patient Report</i
+            >
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="main-card mb-3 card">
+        <div class="card-body">
+          <h5 class="card-title">School Reports</h5>
+          <a href="{% url 'SchoolsReport' %}">
+            <i class="mb-2 mr-2 btn-transition btn btn-outline-info"
+              >Schools Report</i
+            >
+          </a>
+          <a href="{% url 'SchoolStaffReport' %}">
+            <i class="mb-2 mr-2 btn-transition btn btn-outline-info"
+              >School Staff Report</i
+            >
+          </a>
+          <a href="{% url 'StudentReport' %}">
+            <i class="mb-2 mr-2 btn-transition btn btn-outline-info"
+              >Student Report</i
+            >
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endblock %}
+  </div>
+</div>

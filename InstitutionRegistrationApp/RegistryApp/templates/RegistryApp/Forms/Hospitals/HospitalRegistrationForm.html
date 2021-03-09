@@ -1,0 +1,195 @@
+{% extends 'RegistryApp/base.html' %} {% load crispy_forms_tags %} {% load static %} {% block content %}
+
+    <!-- Page Content -->
+    <!-- Heading Starts Here -->
+    <div class="page-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>HOSPITAL REGISTRATION FORM</h1>
+            <p><a href="{% url 'Home' %}">Home</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Heading Ends Here -->
+
+
+    <!-- Contact Us Starts Here -->
+    <div class="contact-us">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="contact-form">
+              <form id="contact" action="{% url 'HospitalRegistrationForm' %}" method="post">
+              {% csrf_token %}
+                <div class="row">
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label>Hospital ID:</label>
+                      {{form.hospital_id|as_crispy_field}}
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label>Hospital Name:</label>
+                      {{form.hospital_name|as_crispy_field}}
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label>Hospital Type:</label>
+                      {{form.hospital_type|as_crispy_field}}
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label>Hospital Level:</label>
+                      {{form.hospital_level|as_crispy_field}}
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label>
+                        The institution shall maintain at least six
+                        inpatient beds, which shall be
+                        continuously available for the care of
+                        patients who are nonrelated and who
+                        stay on the average in excess of 24
+                        hours per admission:
+                      </label>
+                      {{form.hospital_registration_response_one|as_crispy_field}}
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label>
+                        The institution shall be constructed,
+                        equipped, and maintained to ensure the
+                        health and safety of patients and to
+                        provide uncrowded, sanitary facilities
+                        for the treatment of patients:
+                      </label>
+                      {{form.hospital_registration_response_two|as_crispy_field}}
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label>
+                        There shall be an identifiable governing
+                        authority legally and morally
+                        responsible for the conduct of the
+                        hospital:
+                      </label>
+                      {{form.hospital_registration_response_three|as_crispy_field}}
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label>
+                        There shall be a chief executive to
+                        whom the governing authority delegates
+                        the continuous responsibility for the
+                        operation of the hospital in accordance
+                        with establish policy:
+                      </label>
+                      {{form.hospital_registration_response_four|as_crispy_field}}
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label>
+                        There shall be an organized medical
+                        staff or fully licensed physicians* that
+                        may include other licensed individuals
+                        permitted by law and by the hospital to
+                        provide patient care services
+                        independently in the hospital:
+                      </label>
+                      {{form.hospital_registration_response_five|as_crispy_field}}
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label>
+                        Each patient shall be admitted on the
+                        authority of a member of the medical
+                        staff who has been granted the privilege
+                        to admit patients to inpatient services in
+                        accordance with state law and criteria
+                        for standards of medical care established
+                        by the individual medical staff:
+                      </label>
+                      {{form.hospital_registration_response_six|as_crispy_field}}
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label>
+                        Registered nurse supervision and other
+                        nursing services are continuous:
+                      </label>
+                      {{form.hospital_registration_response_seven|as_crispy_field}}
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label>
+                        A current and complete‡ medical record
+                        shall be maintained by the institution for
+                        each patient and shall be available for
+                        reference:
+                      </label>
+                      {{form.hospital_registration_response_eight|as_crispy_field}}
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label>
+                        Pharmacy services shall be maintained
+                        in the institution and shall be supervised
+                        by a registered pharmacist:
+                      </label>
+                      {{form.hospital_registration_response_nine|as_crispy_field}}
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label>
+                        The institution shall provide patients
+                        with food service that meets their
+                        nutritional and therapeutic requirements;
+                        special diets shall also be provided:
+                      </label>
+                      {{form.hospital_registration_response_ten|as_crispy_field}}
+                    </fieldset>
+                  </div>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <div class="row col-lg-12">
+                    <div class="col-lg-4">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="main-button fas fa-database">Register</button>
+                    </fieldset>
+                    </div>
+                    <div class="col-lg-8">
+                        <fieldset>
+                        <div class="col-md-4 position-relative form-check">
+                                <a href="{% url 'HospitalReport' %}" class="mt-1 btn btn-secondary btn-block btn-lg">
+                                    <i class="fas fa-stream"></i>Back To Report
+                                </a>
+                            </div>
+                        </fieldset>
+                    </div>
+                  </div>
+                </div>
+              </form>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br></br>
+    <br></br>
+    {% endblock %}

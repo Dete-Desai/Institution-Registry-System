@@ -1,0 +1,64 @@
+{% extends 'RegistryApp/base.html' %} 
+{% load static %} 
+{% block content %}
+<div class="app-page-title">
+    <!-- Page Content -->
+    <!-- Heading Starts Here -->
+    <div class="page-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>HOSPITAL STAFF REPORT</h1>
+            <p><a href="{% url 'Home' %}">Home</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Heading Ends Here -->
+    <a href="{% url 'HospitalStaffRegistrationForm' %}">
+        <i class="fa fa-arrow-left"> Back</i>
+    </a>
+</div>
+<div class="row">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="main-card mb-3 card">
+                <div class="card-body">
+                    <div class="row col-lg-12">
+                        <div class="col-md-10">
+                            <h5 class="card-title">Hospital Staff Records</h5>
+                        </div>
+                    </div>
+                    <br></br>
+
+                    <table class="mb-0 table">
+                        <thead>
+                            <tr>
+                                <th>Hospital Clinic ID</th>
+                                <th>National/Passport Number</th>
+                                <th>Staff Work ID</th>
+                                <th>Hospital/Clinic Name</th>
+                                <th>Staff Name</th>
+                                <th>Staff Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for HospitalStaffRegistrationForm in HospitalStaffReport %}
+                            <tr>
+                                <td>{{HospitalStaffRegistrationForm.hospital_clinic_id}}</td>
+                                <td>{{HospitalStaffRegistrationForm.national_passport_id}}</td>
+                                <td>{{HospitalStaffRegistrationForm.staff_work_id}}</td>
+                                <td>{{HospitalStaffRegistrationForm.hospital_clinic_name}}</td>
+                                <td>{{HospitalStaffRegistrationForm.staff_name}}</td>
+                                <td>{{HospitalStaffRegistrationForm.staff_role}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
